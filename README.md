@@ -5,7 +5,7 @@ Three-column single-page dashboard for your stock game.
 ## Layout
 - Column 1: Tom
 - Column 2: Joe
-- Column 3: Nic (empty placeholder for now)
+- Column 3: Nic
 
 ## Performance baseline
 - Start date is fixed to **January 30, 2026**.

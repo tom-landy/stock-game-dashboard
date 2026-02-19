@@ -7,7 +7,44 @@ const state = {
   portfolios: {
     Tom: [],
     Joe: [],
-    Nic: []
+    Nic: [
+      {
+        id: id(),
+        asset: "Franklin FTSE India",
+        ticker: "FRIN",
+        weight: 25,
+        buyPrice: 1,
+        currentPrice: 1,
+        buyDate: START_DATE
+      },
+      {
+        id: id(),
+        asset: "HSBC MSCI China",
+        ticker: "HMCH",
+        weight: 25,
+        buyPrice: 1,
+        currentPrice: 1,
+        buyDate: START_DATE
+      },
+      {
+        id: id(),
+        asset: "Invesco FTSE All-World",
+        ticker: "FWRG",
+        weight: 25,
+        buyPrice: 1,
+        currentPrice: 1,
+        buyDate: START_DATE
+      },
+      {
+        id: id(),
+        asset: "Vanguard S&P 500",
+        ticker: "VUAG",
+        weight: 25,
+        buyPrice: 1,
+        currentPrice: 1,
+        buyDate: START_DATE
+      }
+    ]
   }
 };
 
@@ -433,7 +470,7 @@ document.getElementById("refreshPrices").addEventListener("click", async () => {
 document.getElementById("loadProvided").addEventListener("click", async () => {
   state.portfolios = defaultPortfolios();
   writeStore();
-  setStatus("Tom and Joe portfolios loaded. Each starts at GBP 100; Nic is ready for later.");
+  setStatus("Tom, Joe, and Nic portfolios loaded. Each starts at GBP 100.");
   await render();
 });
 
