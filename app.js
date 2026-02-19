@@ -494,20 +494,19 @@ async function render() {
   });
 }
 
-document.getElementById("refreshPrices").addEventListener("click", async () => {
-  const healthy = await checkApiHealth();
-  if (!healthy) {
-    setStatus("Live API is unreachable. Start server.py and open http://127.0.0.1:8787 (not file://).");
-    return;
-  }
-  setStatus("Refreshing live quotes and trend data...");
-  await updateLivePrices();
-});
-
 document.getElementById("loadProvided").addEventListener("click", async () => {
   state.portfolios = defaultPortfolios();
   writeStore();
-  setStatus("Tom, Joe, and Nic portfolios loaded. Each starts at GBP 100.");
+  await render();
+
+  const healthy = await checkApiHealth();
+  if (!healthy) {
+    setStatus("Portfolios loaded. Live API is unreachable. Start server.py and open http://127.0.0.1:8787 (not file://).");
+    return;
+  }
+
+  setStatus("Portfolios loaded. Refreshing live quotes and trend data...");
+  await updateLivePrices();
   await render();
 });
 
