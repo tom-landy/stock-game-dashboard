@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stock Game Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <h1>Stock Game Dashboard</h1>
+        <p>Start date: <strong>January 30, 2026</strong> • Compare Tom, Joe, and Nic side by side.</p>
+      </div>
+      <div class="actions">
+        <button id="loadProvided" class="ghost">Load Tom & Joe Portfolios</button>
+        <button id="clearAll" class="danger">Clear All</button>
+      </div>
+    </header>
+
+    <section class="panel controls">
+      <h2>Live Price Controls</h2>
+      <div class="control-grid">
+        <div class="inline-actions">
+          <button id="refreshPrices">Refresh Live Data</button>
+        </div>
+      </div>
+      <p class="status">Yahoo Finance data is proxied server-side for reliability and CORS safety.</p>
+      <p id="status" class="status" aria-live="polite"></p>
+    </section>
+
+    <section class="columns" id="columnsRoot"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
