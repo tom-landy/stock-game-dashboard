@@ -170,7 +170,44 @@ function defaultPortfolios() {
         buyDate: START_DATE
       }
     ],
-    Nic: []
+    Nic: [
+      {
+        id: id(),
+        asset: "Franklin FTSE India",
+        ticker: "FRIN",
+        weight: 25,
+        buyPrice: 1,
+        currentPrice: 1,
+        buyDate: START_DATE
+      },
+      {
+        id: id(),
+        asset: "HSBC MSCI China",
+        ticker: "HMCH",
+        weight: 25,
+        buyPrice: 1,
+        currentPrice: 1,
+        buyDate: START_DATE
+      },
+      {
+        id: id(),
+        asset: "Invesco FTSE All-World",
+        ticker: "FWRG",
+        weight: 25,
+        buyPrice: 1,
+        currentPrice: 1,
+        buyDate: START_DATE
+      },
+      {
+        id: id(),
+        asset: "Vanguard S&P 500",
+        ticker: "VUAG",
+        weight: 25,
+        buyPrice: 1,
+        currentPrice: 1,
+        buyDate: START_DATE
+      }
+    ]
   };
 }
 
